@@ -18,7 +18,7 @@ startup
 		//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//These are for the NTSCU (American) Version of the game
 		//Map
-		emu.Make<ushort>("U_Map", 0x7216E);
+		emu.Make<ushort>("U_Map", 0x714C6);
 		//Key Item bits
 		emu.Make<byte>("U_Key1", 0x72714);
 		emu.Make<byte>("U_Key2", 0x72715);
