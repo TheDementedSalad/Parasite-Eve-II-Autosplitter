@@ -49,7 +49,7 @@ startup
 
    // Our standard startup code can be put below this point
    
-	vars.completedSplits = new bool[41];
+	vars.completedSplits = new bool[44];
 
 	settings.Add("Door", false, "Door Splitter - Does Not Split on Level End");
 
@@ -132,7 +132,7 @@ update
 onStart
 {
 	//resets the splits bools when a new run starts
-	vars.completedSplits = new bool[41];
+	vars.completedSplits = new bool[44];
 }
 
 start
@@ -175,12 +175,12 @@ split
 	}
 	
 	if(settings["Boss"]){
-		if(settings["BO1"] && current.Map == 272 && current.BO1 <= 0 && old.BO1 >= 1 && !vars.completedSplits[38])			{return vars.completedSplits[38]  = true;} 
-		if(settings["BO2"] && current.Map == 521 && current.BO2 <= 0 && old.BO1 >= 1 && !vars.completedSplits[39])			{return vars.completedSplits[39]  = true;}
-		if(settings["BO3"] && current.Map == 797 && current.BO2 <= 0 && old.BO1 >= 1 && !vars.completedSplits[40])			{return vars.completedSplits[40]  = true;}
+		if(settings["BO1"] && current.Map == 272 && current.BO1 <= 0 && old.BO1 >= 1 && !vars.completedSplits[40])			{return vars.completedSplits[40]  = true;} 
+		if(settings["BO2"] && current.Map == 521 && current.BO2 <= 0 && old.BO1 >= 1 && !vars.completedSplits[41])			{return vars.completedSplits[41]  = true;}
+		if(settings["BO3"] && current.Map == 797 && current.BO2 <= 0 && old.BO1 >= 1 && !vars.completedSplits[42])			{return vars.completedSplits[42]  = true;}
 	}
 	
-	if(settings["End"] && current.Map == 1046 && current.BOF <= 0 && old.BOF >= 1 && !vars.completedSplits[41])			{return vars.completedSplits[41]  = true;}
+	if(settings["End"] && current.Map == 1046 && current.BOF <= 0 && old.BOF >= 1 && !vars.completedSplits[43])			{return vars.completedSplits[43]  = true;}
 }
 
 gameTime
