@@ -13,37 +13,37 @@ startup
 	vars.Helper.Load = (Func<dynamic, bool>)(emu => 
     {
 	//Address of Gamecode (This can be multiple addresses in some cases
-		emu.MakeString("UGamecode", 10, 0x60DDA);		//SLUS-01042
-		emu.MakeString("PGamecode", 10, 0x61F52);		//SLES-02558
+		emu.MakeString("UGamecode", 10, 0x80060DDA);		//SLUS-01042
+		emu.MakeString("PGamecode", 10, 0x80061F52);		//SLES-02558
 		//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//These are for the NTSCU (American) Version of the game
 		//Map
-		emu.Make<ushort>("U_Map", 0x714C6);
+		emu.Make<ushort>("U_Map", 0x800714C6);
 		//Key Item bits
-		emu.Make<byte>("U_Key1", 0x72714);
-		emu.Make<byte>("U_Key2", 0x72715);
-		emu.Make<byte>("U_Key3", 0x72716);
-		emu.Make<byte>("U_Key4", 0x72717);
-		emu.Make<byte>("U_Key5", 0x72718);
+		emu.Make<byte>("U_Key1", 0x80072714);
+		emu.Make<byte>("U_Key2", 0x80072715);
+		emu.Make<byte>("U_Key3", 0x80072716);
+		emu.Make<byte>("U_Key4", 0x80072717);
+		emu.Make<byte>("U_Key5", 0x80072718);
 		//Bosses
-		emu.Make<short>("U_BO1", 0x91C00);
-		emu.Make<short>("U_BO2", 0x91D48);
-		emu.Make<short>("U_BO3", 0x91E88);
+		emu.Make<short>("U_BO1", 0x80091C00);
+		emu.Make<short>("U_BO2", 0x80091D48);
+		emu.Make<short>("U_BO3", 0x80091E88);
 		
-		emu.Make<short>("U_BOF", 0x91CF8);
+		emu.Make<short>("U_BOF", 0x80091CF8);
 		//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		//These are for the NTSCU (American) Version of the game
+		//These are for the PAL Version of the game
 		//Map
-		emu.Make<ushort>("P_Map", 0x7254E);
+		emu.Make<ushort>("P_Map", 0x8007254E);
 		//Key Item bits
-		emu.Make<byte>("P_Key1", 0x7379C);
-		emu.Make<byte>("P_Key2", 0x7379D);
-		emu.Make<byte>("P_Key3", 0x7379E);
-		emu.Make<byte>("P_Key4", 0x7379F);
-		emu.Make<byte>("P_Key5", 0x737A0);
+		emu.Make<byte>("P_Key1", 0x8007379C);
+		emu.Make<byte>("P_Key2", 0x8007379D);
+		emu.Make<byte>("P_Key3", 0x8007379E);
+		emu.Make<byte>("P_Key4", 0x8007379F);
+		emu.Make<byte>("P_Key5", 0x800737A0);
 		//Bosses
-		emu.Make<short>("P_BO1", 0x92D00);
-		emu.Make<short>("P_BOF", 0x92D80);
+		emu.Make<short>("P_BO1", 0x80092D00);
+		emu.Make<short>("P_BOF", 0x80092D80);
 	return true;
     });
 
@@ -181,13 +181,4 @@ split
 	}
 	
 	if(settings["End"] && current.Map == 1046 && current.BOF <= 0 && old.BOF >= 1 && !vars.completedSplits[43])			{return vars.completedSplits[43]  = true;}
-}
-
-gameTime
-{
-}
-
-shutdown
-{
-
 }
